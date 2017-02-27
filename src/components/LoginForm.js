@@ -3,8 +3,7 @@
 //-------------------------------
 
 	import React, { Component } from 'react';
-	import { View } from 'react-native';
-	import { Button, Card, CardSection } from './common';
+	import { Button, Card, CardSection, Input } from './common';
 
 //-------------------------------
 // LoginForm Component
@@ -12,7 +11,9 @@
 
 	class LoginForm extends Component {
 		//State
-		state = {}
+		state = {
+			text: ''
+		}
 
 		//Life cycle methods
 		componentWillMount() {}
@@ -29,7 +30,13 @@
 		render() {
 			return (
 				<Card>
-					<CardSection />
+					<CardSection>
+						<Input
+							label={'Email'}
+							value={this.state.text}
+							onChangeText={text => this.setState({ text })}
+						/>
+					</CardSection>
 					<CardSection />
 					<CardSection>
 						<Button>
