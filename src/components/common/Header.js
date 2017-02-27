@@ -42,4 +42,4 @@
 // Export Component
 //-------------------------------
 
-	export default Header;
+	export { Header };

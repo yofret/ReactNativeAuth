@@ -33,4 +33,4 @@
 //-------------------------------
 // Export Component
 //-------------------------------
-	export default CardSection;
+	export { CardSection };

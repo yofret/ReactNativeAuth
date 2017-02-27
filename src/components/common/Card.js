@@ -37,4 +37,4 @@
 //-------------------------------
 // Export Component
 //-------------------------------
-	export default Card;
+	export { Card };

@@ -45,4 +45,4 @@
 //-------------------------------
 // Export Component
 //-------------------------------
-	export default Button;
+	export { Button };
