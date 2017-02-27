@@ -4,28 +4,18 @@
 
 	import React, { Component } from 'react';
 	import { View } from 'react-native';
-	import firebase from 'firebase';
-	import { Header } from './components/common';
-	import LoginForm from './components/LoginForm';
+	import { Button, Card, CardSection } from './common';
 
 //-------------------------------
-// App Component
+// LoginForm Component
 //-------------------------------
 
-	class App extends Component {
+	class LoginForm extends Component {
 		//State
 		state = {}
 
 		//Life cycle methods
-		componentWillMount() {
-			firebase.initializeApp({
-				apiKey: "AIzaSyACa_PPn-t8QFOat6g-BzQ2-mAeVeDsxYM",
-				authDomain: "auth-f35b9.firebaseapp.com",
-				databaseURL: "https://auth-f35b9.firebaseio.com",
-				storageBucket: "auth-f35b9.appspot.com",
-				messagingSenderId: "678321840160"
-			})
-		}
+		componentWillMount() {}
 
 		componentDidMount() {}
 
@@ -38,10 +28,15 @@
 		// Render methods
 		render() {
 			return (
-				<View>
-					<Header headerText='Authentication' />
-					<LoginForm />
-				</View>
+				<Card>
+					<CardSection />
+					<CardSection />
+					<CardSection>
+						<Button>
+							Log in
+						</Button>
+					</CardSection>
+				</Card>
 			);
 		}					
 	}
@@ -50,4 +45,4 @@
 // Export Component
 //-------------------------------
 
-	export default App;
+	export default LoginForm;
