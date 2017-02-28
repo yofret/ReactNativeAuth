@@ -26,7 +26,7 @@
 				messagingSenderId: "678321840160"
 			})
 
-			firebase.auth.onAuthStateChanged((user) => {
+			firebase.auth().onAuthStateChanged((user) => {
 				if(user){
 					this.setState({ loggedIn: true });
 				} else {
