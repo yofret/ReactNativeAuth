@@ -3,20 +3,28 @@
 //-------------------------------
 
 	import React from 'react';
-	import { Text, View } from 'react-native';
+	import { View, ActivityIndicator } from 'react-native';
 
 //-------------------------------
 // Spinner Component
 //-------------------------------
 
-	const Spinner = (props) => {
+	const Spinner = ({ size }) => {
 
 		return (
-			<View>
-				<Text>Dude!!</Text>
+			<View style={styles.spinnerStyle}>
+				<ActivityIndicator size={size || 'large'}/>
 			</View>
 		);
 	};
+
+	const styles = {
+		spinnerStyle: {
+			flex: 1,
+			justifyContent: 'center',
+			alignItems: 'center'
+		}
+	}
 
 //-------------------------------
 // Export Component
