@@ -14,7 +14,7 @@
 
 	class App extends Component {
 		//State
-		state = {}
+		state = { loggedIn: false }
 
 		//Life cycle methods
 		componentWillMount() {
@@ -24,6 +24,14 @@
 				databaseURL: "https://auth-f35b9.firebaseio.com",
 				storageBucket: "auth-f35b9.appspot.com",
 				messagingSenderId: "678321840160"
+			})
+
+			firebase.auth.onAuthStateChanged((user) => {
+				if(user){
+					this.setState({ loggedIn: true });
+				} else {
+					this.setState({ loggedIn: false });
+				}
 			})
 		}
 
